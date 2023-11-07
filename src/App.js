@@ -13,10 +13,11 @@ function App() {
   return (
    
     <div className="app">
-            <RegisterModal show={showModal} handleClose={handleClose} />
 
     <div className="content">
       <Navbar />
+      <RegisterModal show={showModal} handleClose={handleClose} />
+
       <SimonGame/>
   </div>
     <footer className="footer">

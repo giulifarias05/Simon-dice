@@ -32,3 +32,55 @@
     font-size: 14px;
   }
 }
+
+/* styles.css */
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000d5;
+}
+
+.form-side {
+  width: 400px; /* Ancho fijo del contenedor */
+  background-color: #ffc579b2; /* Fondo blanco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 4 8px 10px rgba(0, 0, 0, 0.007);
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Ocupa el ancho completo del input */
+}
+
+form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Ocupa el ancho completo del button */
+}
+
+.registro{
+  background-color: #000000;
+  width: 150px;
+  margin-top: 10px;
+}
+/* Agrega más estilos según sea necesario */

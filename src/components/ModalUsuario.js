@@ -1,34 +1,50 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
 
-const RegisterModal = ({ show, handleClose }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const RegisterForm = ({ handleRegistration, showForm }) => {
+  const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
-    handleClose();
+    e.preventDefault();
+    handleRegistration(name);
   };
 
+  if (!showForm) {
+    return null;
+  }
+
   return (
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-      <Modal.Title className="customModalTitle">No olvides registrarte antes de jugar!</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Nombre de usuario:
-            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-          </label>
-        <br></br>        <br></br>
-          <Button variant="btn btn-dark" type="submit">
-            Registrarse
-          </Button>
-        </form>
-      </Modal.Body>
-    </Modal>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Nombre de usuario:
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+        <button className='registro' type="submit">Registrarme</button>
+      </form>
+    </div>
   );
 };
 
-export default RegisterModal;
+const App = () => {
+  const [username, setUsername] = useState('');
+  const [showForm, setShowForm] = useState(true);
+
+  const handleRegistration = (name) => {
+    setUsername(name);
+    setShowForm(false);
+  };
+
+  return (
+    <div className="app-container">
+      <div className="roulette-container">
+        {/* Aquí va el contenido de la ruleta */}
+      </div>
+      <div className="form-side">
+        {username && <h1>Hola, {username}</h1>}
+        <RegisterForm handleRegistration={handleRegistration} showForm={showForm} />
+      </div>
+    </div>
+  );
+};
+
+export default App;
