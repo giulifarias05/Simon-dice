@@ -15,9 +15,9 @@ const RegisterForm = ({ handleRegistration, showForm }) => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label>
-          Nombre de usuario:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      <label style={{ color: 'black' }}>
+      <label className='textoUsuario'>Nombre de usuario:</label>
+          <input type="text" className='jugador' value={name} onChange={(e) => setName(e.target.value)} style={{ color: 'white' }} />
         </label>
         <button className='registro' type="submit">Registrarme</button>
       </form>
@@ -25,7 +25,7 @@ const RegisterForm = ({ handleRegistration, showForm }) => {
   );
 };
 
-const App = () => {
+const Registro = () => {
   const [username, setUsername] = useState('');
   const [showForm, setShowForm] = useState(true);
 
@@ -36,15 +36,12 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <div className="roulette-container">
-        {/* Aquí va el contenido de la ruleta */}
-      </div>
       <div className="form-side">
-        {username && <h1>Hola, {username}</h1>}
+        {username && <h1 style={{ color: 'white' }}>Hola, <span style={{ color: 'white' }}>{username}</span></h1>}
         <RegisterForm handleRegistration={handleRegistration} showForm={showForm} />
       </div>
     </div>
   );
 };
 
-export default App;
+export default Registro;

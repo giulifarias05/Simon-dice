@@ -5,15 +5,11 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: rgb(38,38,38);
 }
 .buttonWithShadow {
   box-shadow: 0 0 10px 2px rgb(255, 252, 252), 0 0 20px 4px rgb(229, 226, 226);
   transform: scale(1.05);
-}
-.customModalTitle {
-  font-family:Georgia, 'Times New Roman', Times, serif; /* Cambia la tipografía a Arial */
-  font-size: 24px; /* Ajusta el tamaño del texto a 24px */
-  /* Puedes agregar otros estilos según sea necesario */
 }
 
 
@@ -33,21 +29,22 @@
   }
 }
 
-/* styles.css */
 
 .app-container {
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  background-color: #000000d5;
+  background-color: rgb(38,38,38);
+  margin-top: 20px;
+  margin-bottom: -60px;
 }
 
 .form-side {
-  width: 400px; /* Ancho fijo del contenedor */
-  background-color: #ffc579b2; /* Fondo blanco */
+  width: 400px; 
+  background-color: #000000b2; 
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 4 8px 10px rgba(0, 0, 0, 0.007);
+  box-shadow: 4 8px 10px rgba(0, 0, 0, 0.877);
   text-align: center;
 }
 
@@ -59,13 +56,14 @@
 
 form label {
   font-weight: bold;
+  color: white;
 }
 
 form input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%; /* Ocupa el ancho completo del input */
+  width: 100%; 
 }
 
 form button {
@@ -75,12 +73,17 @@ form button {
   background-color: #3498db;
   color: white;
   cursor: pointer;
-  width: 100%; /* Ocupa el ancho completo del button */
+  width: 100%; 
 }
 
+.textUsuario{
+  color: white;
+}
 .registro{
   background-color: #000000;
   width: 150px;
   margin-top: 10px;
 }
-/* Agrega más estilos según sea necesario */
+.jugador{
+  color: white;
+}
