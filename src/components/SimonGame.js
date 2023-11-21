@@ -7,7 +7,6 @@ function SimonGame() {
   const [secuencia, setSecuencia] = useState([]);
   const [playing, setPlaying] = useState(false);
   const [Indexjug, setIndexjug] = useState(0);
-  const [puntaje, setPuntaje] = useState(0); 
   const [resultados, setResultados] = useState([]);
 
 
@@ -21,7 +20,6 @@ function SimonGame() {
     setSecuencia([]);
     setPlaying(false);
     setIndexjug(0);
-    setPuntaje(0); 
 
   };
 

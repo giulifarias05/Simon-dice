@@ -5,10 +5,11 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: rgb(38,38,38);
+  background-color: rgb(38, 38, 38);
 }
+
 .buttonWithShadow {
-  box-shadow: 0 0 10px 2px rgb(255, 252, 252), 0 0 20px 4px rgb(229, 226, 226);
+  box-shadow: 0 0 10px 2px rgb(58, 123, 126), 0 0 20px 4px rgb(24, 112, 116);
   transform: scale(1.05);
 }
 
@@ -23,6 +24,18 @@
   padding: 15px 0;
 }
 
+.navbar {
+  width: 100%;
+  background-color: rgb(17, 17, 17);
+  padding: 15px 0;
+}
+
+.imagen {
+  width: 70px;
+  height: 60px;
+  border-radius: 25px;
+}
+
 @media (max-width: 768px) {
   .footer {
     font-size: 14px;
@@ -32,20 +45,23 @@
 
 .app-container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  background-color: rgb(38,38,38);
+  background-color: rgb(38, 38, 38);
   margin-top: 20px;
   margin-bottom: -60px;
 }
 
+
 .form-side {
-  width: 400px; 
-  background-color: #000000b2; 
-  padding: 20px;
+  width: 400px;
+  background-color: #ffffffb2;
+  padding: 8px;
   border-radius: 8px;
   box-shadow: 4 8px 10px rgba(0, 0, 0, 0.877);
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: -50px;
 }
 
 .form-container {
@@ -63,7 +79,7 @@ form input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%; 
+  width: 100%;
 }
 
 form button {
@@ -73,17 +89,25 @@ form button {
   background-color: #3498db;
   color: white;
   cursor: pointer;
-  width: 100%; 
+  width: 100%;
 }
 
-.textUsuario{
+.textUsuario {
   color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
-.registro{
-  background-color: #000000;
+
+.registro {
+  background-color: rgb(48, 46, 46);
   width: 150px;
   margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  font-family: 'Times New Roman', Times, serif;
 }
-.jugador{
+
+.jugador {
   color: white;
+  width: 300px;
+  margin-top: 10px;
 }
