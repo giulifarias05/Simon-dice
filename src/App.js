@@ -5,25 +5,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 
 function App() {
-  const [showModal, setShowModal] = useState(true);
-
- 
+  const [showModal] = useState(true);
   return (
-   
     <div className="app">
-
     <div className="content">
       <RegisterModal show={showModal}  />
-
       <SimonGame/>
   </div>
     <footer className="footer">
     <Footer />
     </footer>
 </div>
-);
-   
-
-   ;}
+); ;}
 
 export default App;
