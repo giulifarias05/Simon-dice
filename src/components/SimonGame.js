@@ -139,7 +139,7 @@ function SimonGame() {
         </div>
 
         <button
-          className="absolute bg-neutral-900 text-white text-xl sm:text-2xl font-bold rounded-full w-[150px] sm:w-[175px] h-[150px] sm:h-[175px] duration-200 hover:scale-105"
+          className="absolute bg-neutral-900 text-white text-xl sm:text-2xl font-bold rounded-full w-[100px] sm:w-[130px] h-[100px] sm:h-[130px] duration-200 hover:scale-105"
           onClick={SiguienteNivel}
         >
          {secuencia.length === 0 ? "Jugar" : `Nivel ${secuencia.length}`}
