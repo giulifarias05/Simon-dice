@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import GameBtn from "./GameBtn";
-
+import BotonColor from "./BotonColor";
 const colores = ["green", "red", "yellow", "blue"];
 
 function SimonGame() {
@@ -8,7 +7,7 @@ function SimonGame() {
   const [playing, setPlaying] = useState(false);
   const [Indexjug, setIndexjug] = useState(0);
   const [resultados, setResultados] = useState([]);
-
+  const [audio] = useState(new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"));
 
 
   const greenRef = useRef(null);
@@ -20,6 +19,8 @@ function SimonGame() {
     setSecuencia([]);
     setPlaying(false);
     setIndexjug(0);
+     audio.pause();
+     audio.currentTime = 0;
 
   };
 
@@ -74,18 +75,20 @@ function SimonGame() {
         let ref = null;
 
         if (secuencia[idx] === "green") ref = greenRef;
-        if (secuencia[idx] === "red") ref = redRef;
+       if (secuencia[idx] === "red") ref = redRef;
         if (secuencia[idx] === "yellow") ref = yellowRef;
         if (secuencia[idx] === "blue") ref = blueRef;
-
         setTimeout(() => {
           ref.current.classList.add("brightness-[2.5]");
 
           setTimeout(() => {
             ref.current.classList.remove("brightness-[2.5]");
-            if (idx < secuencia.length - 1) mostrarSecuencia(idx + 1);
-          }, 250);
-        }, 250);
+            if (idx < secuencia.length - 1) mostrarSecuencia(idx + 1); 
+            
+
+          }, 350); audio.play();
+
+        }, 350);
       };
 
       mostrarSecuencia();
@@ -102,7 +105,7 @@ function SimonGame() {
     <div className="flex justify-center items-center bg-neutral-800 text-white w-screen h-screen">
       <div className="relative flex flex-col justify-center items-center">
         <div>
-          <GameBtn
+          <BotonColor
             color="green"
             border="rounded-tl-full"
             bg="bg-green-500"
@@ -110,7 +113,7 @@ function SimonGame() {
             ref={greenRef}
           />
 
-          <GameBtn
+          <BotonColor
             color="red"
             border="rounded-tr-full"
             bg="bg-red-500"
@@ -119,7 +122,7 @@ function SimonGame() {
           />
         </div>
         <div>
-          <GameBtn
+          <BotonColor
             color="yellow"
             border="rounded-bl-full"
             bg="bg-yellow-400"
@@ -127,7 +130,7 @@ function SimonGame() {
             ref={yellowRef}
           />
 
-          <GameBtn
+          <BotonColor
             color="blue"
             border="rounded-br-full"
             bg="bg-blue-500"
